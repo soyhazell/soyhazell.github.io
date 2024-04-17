@@ -1,10 +1,88 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Hazel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #ff7eb9;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header,
+        main,
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section.contact {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #ff7eb9;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff7eb9;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .survey-question {
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
+
 <body>
     <nav>
         <ul>
@@ -14,38 +92,87 @@
             <li><a href="projects.html">Projects</a></li>
         </ul>
     </nav>
+
     <header>
         <h1>Contact Hazel</h1>
         <p class="tagline">Designing Tomorrow's Learning Experiences Today</p>
     </header>
+
     <main>
         <section class="contact">
             <h2>Contact Me</h2>
             <p>Feel free to reach out to me for inquiries, collaborations, or just to say hello!</p>
-            
+
             <form action="submit_form.php" method="post">
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
-                
+
                 <label for="email">Your Email:</label>
                 <input type="email" id="email" name="email" required>
-                
+
                 <label for="message">Your Message:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
-                
+
                 <button type="submit">Send Message</button>
             </form>
-            
+
+            <h2>Survey & Feedback Form</h2>
+            <p>We value your feedback! Please take a moment to answer a few questions about your experience.</p>
+
+            <form action="submit_survey.php" method="post">
+                <div class="survey-question">
+                    <label for="satisfaction">How satisfied were you with the content of this site?</label><br>
+                    <input type="radio" id="very-satisfied" name="satisfaction" value="Very satisfied" required>
+                    <label for="very-satisfied">Very satisfied</label><br>
+
+                    <input type="radio" id="satisfied" name="satisfaction" value="Satisfied">
+                    <label for="satisfied">Satisfied</label><br>
+
+                    <input type="radio" id="neutral" name="satisfaction" value="Neutral">
+                    <label for="neutral">Neutral</label><br>
+
+                    <input type="radio" id="dissatisfied" name="satisfaction" value="Dissatisfied">
+                    <label for="dissatisfied">Dissatisfied</label><br>
+
+                    <input type="radio" id="very-dissatisfied" name="satisfaction" value="Very dissatisfied">
+                    <label for="very-dissatisfied">Very dissatisfied</label>
+                </div>
+
+                <div class="survey-question">
+                    <label for="improvements">What can be improved?</label><br>
+                    <input type="checkbox" id="design" name="improvements" value="Design">
+                    <label for="design">Design</label><br>
+
+                    <input type="checkbox" id="content" name="improvements" value="Content">
+                    <label for="content">Content</label><br>
+
+                    <input type="checkbox" id="navigation" name="improvements" value="Navigation">
+                    <label for="navigation">Navigation</label><br>
+
+                    <input type="checkbox" id="other" name="improvements" value="Other">
+                    <label for="other">Other</label><br>
+                </div>
+
+                <div class="survey-question">
+                    <label for="comments">Any additional comments?</label><br>
+                    <textarea id="comments" name="comments" rows="4"></textarea>
+                </div>
+
+                <button type="submit">Submit Survey</button>
+            </form>
+
             <p>You can also reach me via email at <a href="mailto:hazelsoy@outlook.com">hazelsoy@outlook.com</a>.</p>
-            
+
             <p>Connect with me:</p>
             <ul class="social-media">
                 <li><a href="https://www.linkedin.com/in/hazel-soy-b77808265/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a></li>
             </ul>
         </section>
-    </main>    
+    </main>
+
     <footer>
         <small>Website designed by <a href="mailto:hazelsoy@outlook.com">Hazel</a>, &copy; 2024</small>
     </footer>
 </body>
+
 </html>
