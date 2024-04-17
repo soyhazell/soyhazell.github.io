@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--Thank you page does not-->
 <html lang="en-us">
 
 <head>
@@ -104,16 +104,21 @@
             <p>Feel free to reach out to me for inquiries, collaborations, or just to say hello!</p>
 
             <form action="https://api.sheetmonkey.io/form/mnZ9jf8SbUUr66bPjjAqVa" method="post">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-
+                <li></li><label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+            </li>
+            <li>
                 <label for="email">Your Email:</label>
                 <input type="email" id="email" name="email" required>
-
+            </li>
+            <li>
                 <label for="message">Your Message:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
-
+            </li>
+            <li class="form-button">
+                <input type="hidden" name="created" value="x-sheetmonkey-current-date-time" />
                 <button type="submit">Send Message</button>
+            </li>
             </form>
 
             <h2>Survey & Feedback Form</h2>
