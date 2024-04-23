@@ -34,10 +34,25 @@
             text-decoration: none;
             color: #fff;
             padding: 5px 10px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
         }
 
-        nav ul li a:hover {
+        nav ul li a:hover,
+        nav ul li a:focus {
             background-color: #ff5f9e;
+            border-color: #fff;
+        }
+
+        nav ul li a:active {
+            background-color: #ff1f56;
+        }
+
+        header, main, footer {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
         }
 
         header {
@@ -46,13 +61,28 @@
             background-color: #f0f0f0;
         }
 
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
         main {
             padding: 20px;
         }
 
-        .intro {
-            text-align: center;
-            margin-bottom: 40px;
+        .intro a,
+        .latest-news a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .intro a:hover,
+        .latest-news a:hover {
+            color: #6c757d;
+            text-decoration: underline;
         }
 
         .btn {
@@ -62,10 +92,16 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
-        .btn:hover {
+        .btn:hover,
+        .btn:focus {
             background-color: #ff5f9e;
+        }
+
+        .btn:active {
+            background-color: #ff1f56;
         }
 
         footer {
@@ -90,13 +126,15 @@
         </ul>
     </nav>
     <header>
+        <img src="prph.jpeg" alt="Hazel's Profile Picture" class="profile-img">
         <h1>Welcome to Hazel's Website</h1>
         <p class="tagline">Designing Tomorrow's Learning Experiences Today</p>
     </header>
     <main>
         <section class="intro">
             <h2>Welcome to Hazel's Learning Experience Designer Website!</h2>
-            <p>Hi! I'm Hazel, a learning experience designer dedicated to creating engaging and effective learning solutions.</p>
+            <p>Hi! I'm Hazel, a student at Mesa Community College.  I'm enrolled in the Graphic Design Associate Degree program. I'm passionate about learning and dedicated to honing my skills in creating engaging and effective learning solutions. My academic journey at MCC allows me to explore various aspects of web design and development, equipping me with the knowledge and tools to excel in this field.</p>
+            <p>This website was designed to showcase the hand-coding of web designs, including those examples on my <a href="projects.html" class="projects-link">Projects page</a>.</p>
             <p>Explore my website to learn more about my projects!</p>
             <a href="about.html" class="btn">Learn More</a>
         </section>
